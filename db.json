@@ -1,37 +1,22 @@
 {
-  "students": [
+  "songs": [
     {
-      "id": 1,
-      "stuname": "Sonam",
-      "email": "sonam@example.com"
+      "a_name": "abbb",
+      "a_Bdate": "111111-11-22",
+      "a_bio": "a12",
+      "s_name": "a2",
+      "s_dor": "0002-02-02",
+      "s_image": "",
+      "id": 1
     },
     {
-      "id": 3,
-      "stuname": "Sumit",
-      "email": "sumit@example.com"
-    },
-    {
-      "stuname": "sad",
-      "email": "sad",
-      "id": 5
-    },
-    {
-      "stuname": "sad",
-      "email": "asd",
-      "date": "",
-      "id": 6
-    },
-    {
-      "stuname": "sad",
-      "email": "sad",
-      "date": "",
-      "id": 7
-    },
-    {
-      "stuname": "sdf",
-      "email": "sdf",
-      "date": "2022-08-06",
-      "id": 8
+      "a_name": "",
+      "a_Bdate": "",
+      "a_bio": "",
+      "s_name": "",
+      "s_dor": "",
+      "s_image": "",
+      "id": 2
     }
   ]
 }

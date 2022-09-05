@@ -17,19 +17,19 @@ const useStyles = makeStyles({
 const View = () => {
  const classes = useStyles();
  const { id } = useParams();
- const [student, setStudent] = useState([]);
+ const [song, setSong] = useState([]);
  const history = useHistory();
  useEffect(() => {
-  async function getStudent() {
+  async function getsong() {
    try {
-    const student = await axios.get(`http://localhost:3333/students/${id}`)
-    // console.log(student.data);
-    setStudent(student.data);
+    const song = await axios.get(`http://localhost:3333/songs/${id}`)
+    // console.log(song.data);
+    setSong(song.data);
    } catch (error) {
     console.log("Something is Wrong");
    }
   }
-  getStudent();
+  getsong();
  }, [id])
 
  function handleClick() {
@@ -38,22 +38,26 @@ const View = () => {
  return (
   <>
    <Box textAlign="center" p={2} className={classes.stuListColor}>
-    <Typography variant="h4">Student Detail</Typography>
+    <Typography variant="h4">Songs Detail</Typography>
    </Box>
    <TableContainer component={Paper}>
     <Table>
      <TableHead>
       <TableRow style={{ backgroundColor: "#616161" }}>
        <TableCell align="center" className={classes.tableHeadCell}>ID</TableCell>
-       <TableCell align="center" className={classes.tableHeadCell}>Name</TableCell>
-       <TableCell align="center" className={classes.tableHeadCell}>Email</TableCell>
+       <TableCell align="center" className={classes.tableHeadCell}>Artist</TableCell>
+       <TableCell align="center" className={classes.tableHeadCell}>Date Of Birth</TableCell>
+       <TableCell align="center" className={classes.tableHeadCell}>Songs</TableCell>
+       {/* <TableCell align="center" className={classes.tableHeadCell}>Email</TableCell> */}
       </TableRow>
      </TableHead>
      <TableBody>
       <TableRow>
-       <TableCell align="center">{student.id}</TableCell>
-       <TableCell align="center">{student.stuname}</TableCell>
-       <TableCell align="center">{student.email}</TableCell>
+       <TableCell align="center">{song.id}</TableCell>
+       <TableCell align="center">{song.a_name}</TableCell>
+       <TableCell align="center">{song.a_Bdate}</TableCell>
+       <TableCell align="center">{song.a_bio}</TableCell>
+       {/* <TableCell align="center">{song.email}</TableCell> */}
       </TableRow>
      </TableBody>
     </Table>
